@@ -8,10 +8,12 @@ var age_input = prompt("How old are you?")
 if (age_input != null) {
   if (age_input < 18) { 
     document.getElementById("changed_text").innerHTML =
-  `${age_input} is too young`;
+  `${age_input} is too young`; 
+  alert(`${age_input} is too young`);
   } else { 
     document.getElementById("changed_text").innerHTML =
-  `Please Enjoy Our Services`;
+  `Please Enjoy Our Services`; 
+  alert(`Please Enjoy Our Services`);
   }
 }
 }
