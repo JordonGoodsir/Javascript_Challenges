@@ -1,24 +1,31 @@
 function toCamelCase(str) {  
-    let camel = str.split(" ");  
-    let complete = [];  
-    let non_camel = 0;
+    let camel = str.replace(/[^0-9a-z" "]/gi, ' ').split(" ");
+
+    function isEven(value){
+        if (value%2 == 0)
+            return true;
+        else
+            return false;
+    }
+
     if (camel.length <= 1) {  
         console.log(str) 
         return str
-    } else {
-    for (let i = 1; i < camel.length;i += 2) {   
-        let split = camel[i].split("").slice(1).join("");
-        complete.push(camel[non_camel]); 
-        non_camel += 2
-        complete.push(camel[i].charAt(0).toUpperCase() + split ) 
-        
-    }} 
+    } else {  
 
-    console.log(complete.join(""))
+     let second = camel.map((v, i) => {   
+         if (isEven(i)) { 
+            return v
+         } else { 
+             return v.charAt(0).toUpperCase() + v.slice(1)
+         }
+        }); 
+     console.log(second.join(""))
+    } 
 
     } 
 
-    toCamelCase("the good person good ye")
+    toCamelCase("thisIsquiteLong")
     
     //this is here to run the tests
     module.exports = {toCamelCase};
