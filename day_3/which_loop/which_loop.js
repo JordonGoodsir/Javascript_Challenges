@@ -36,4 +36,5 @@ function whatDoingToday(day){
 }
 // What day is it today?
 let day = "Wednesday"
-console.log(whatDoingToday(day))
+console.log(whatDoingToday(day)) 
+
