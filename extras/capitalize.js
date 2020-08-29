@@ -9,14 +9,13 @@
 
 // capitalize first letter and capitalize first letter
 
-const cap = str => { 
+const cap = str => {
+  
+  let split = str.split(" ").map((v,i)=> {   
+    return v.split("")[0].toUpperCase() + v.split("").map(x=> x.toLowerCase()).splice(1).join("")
+  }) 
+  console.log(split.join(" "))
 
-  let lowerCase = str.split(" ").map(x => x.toLowerCase()); 
-  for (let i = 0; i < lowerCase.length;i++) { 
-    lowerCase[i] = lowerCase[i].charAt(0).toUpperCase() + lowerCase[i].substring(1)
-  } 
-
-  console.log (lowerCase.join(" "))
 }
 
-cap("heLlo there")
+cap("Quite a Long SENTENCE!")

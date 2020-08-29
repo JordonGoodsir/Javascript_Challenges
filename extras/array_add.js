@@ -26,7 +26,7 @@ const addItem = (arr,item) => {
 
     console.log(arr.filter(( arrItems => {
         let finder = item.split();
-        return eval(`/${finder}/`).test(arrItems);
+        return eval(`/${finder}/`).test(arrItems); 
     })));
 
 
