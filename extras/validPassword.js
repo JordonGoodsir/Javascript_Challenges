@@ -18,26 +18,40 @@ validPassword = password => {
     let capCheck = /[A-Z]/.test(password);
     let numCheck = /[0-9]/.test(password);
 
-    switch(true) { 
-      case password.length < 8: 
-      errors.push("Password Too Short"); 
+    if (password.length < 8) { 
+      errors.push("8 Characters");
+    };
 
-      case !capCheck: 
-      errors.push("Password Requires Atleast 1 Capital Letter");
+    if (!capCheck) { 
+      errors.push("1 Capital Letter");  
+    };  
 
-      case !numCheck:  
-      errors.push("Password Requires Atleast 1 Number");
-      break;
-    } 
+    if (!numCheck) { 
+      errors.push("1 Number"); 
+    }; 
+
+    // switch(true) { 
+      
+    //     case password.length < 8: 
+    //   errors.push("8 Characters");  
+      
+    //   case !capCheck: 
+    //   errors.push("1 Capital Letter");  
+      
+    //   case !numCheck:  
+    //   errors.push("1 Number"); 
+
+    //   break;
+    // } 
 
     if (errors.length === 1) { 
-       console.log(errors.join(" ")) 
+       console.log("Password Requires " + errors.join(" ")) 
     } else if (errors.length > 1) { 
-        console.log(errors.join(" and "))
+        console.log("Password Requires " + errors.join(", "))
     } else {
         console.log("Valid Password")
-    }
+    } 
 
 }  
 
-validPassword("Good")
+validPassword("Gooss2123123")
