@@ -14,21 +14,23 @@ class Developer {
   }   
 
   greet() { 
-      return console.log(`Hello ${this.name}, im a human`)
+    console.log(`Hello ${this.name}, im a human`) 
+    return this
   }  
 
    about() {  
-      return console.log(`Im a ${this.devType}, that uses ${this.languages.join(", ")}`)
+    console.log(`Im a ${this.devType}, that uses ${this.languages.join(", ")}`) 
+    return this
   }  
 
   all_devs() { 
-      return console.log(Developer.devs)
+    console.log(Developer.devs) 
+    return this 
   }
 
 } 
 
 
 let devInstance = new Developer("Alex", "gamedev", ["C#","JS"]);
-devInstance.greet();
-devInstance.about();
+devInstance.greet().about().all_devs();  
 console.log(`There are currently ${Developer.count} developers!`); 
