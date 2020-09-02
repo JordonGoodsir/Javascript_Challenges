@@ -24,10 +24,9 @@ const addOne = arr => {
 
 const addItem = (arr,item) => {   
 
-    console.log(arr.filter(( arrItems => {
-        let finder = item.split();
-        return eval(`/${finder}/`).test(arrItems); 
-    })));
+    console.log(arr.filter(arrItems => {
+        return eval(`/${item}/`).test(arrItems); 
+    }));
 
 
 } 

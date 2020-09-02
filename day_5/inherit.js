@@ -28,7 +28,6 @@ class Teacher extends Person {
     constructor (name, city,classesTeaching) {  
         super(name, city)
         this.classesTeaching = classesTeaching 
-        Teacher.count +=1 
     } 
     
 } 
@@ -38,7 +37,6 @@ class Student extends Person {
     constructor (name,city,classesStudying) {  
       super(name, city)
       this.classesStudying = classesStudying 
-      Student.count +=1
     }
     
 }  

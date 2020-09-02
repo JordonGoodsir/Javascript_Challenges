@@ -31,6 +31,7 @@ class Developer {
 } 
 
 
-let devInstance = new Developer("Alex", "gamedev", ["C#","JS"]);
+let devInstance = new Developer("Alex", "gamedev", ["C#","JS"]); 
+let devInstance1 = new Developer("Alex", "gamedev", ["C#","JS"]);
 devInstance.greet().about().all_devs();  
 console.log(`There are currently ${Developer.count} developers!`); 
