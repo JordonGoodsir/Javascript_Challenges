@@ -1,0 +1,25 @@
+.square { 
+    height: 200px; 
+    width: 200px;
+}  
+
+.obstacle { 
+    background-color: green;
+}
+
+#still_square{ 
+    background-color: black;  
+    position: relative;
+
+} 
+
+#moving_square{ 
+    background-color: orange; 
+    position: absolute;  
+    top:50%;
+    left:50%; 
+    transition: 0.1s;
+} 
+
+
+

@@ -31,4 +31,8 @@ const addItem = (arr,item) => {
 
 } 
 
-addItem(["ther","good","the"],"the")
+addItem(["ther","good","the"],"the") 
+
+console.log(5 + "5") 
+
+console.log(typeof(String(1))) 
