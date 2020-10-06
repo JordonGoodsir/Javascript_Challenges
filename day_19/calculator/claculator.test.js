@@ -1,6 +1,8 @@
+const {one, two, three, plus, minus, divide, multiply} = require('./calculator')
+
 describe("calculator tests", () =>{ 
     it("plus", () =>{ 
-     expect(one(plus(two()))).toBe(3)
+     expect(one(plus(one()))).toBe(2)
     })  
 
     it("minus", () =>{  
