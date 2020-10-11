@@ -1,6 +1,6 @@
 const express = () => {
-    get
-    post
+    // get
+    // post
 }
 module.export = {
     express

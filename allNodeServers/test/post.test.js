@@ -1,4 +1,4 @@
-const expect = require("expect") 
+// const expect = require("expect") 
 const utilities = require("../src/util/utilities") 
 
 const testDataFile = require("../src/data/blog_posts.test.json") 
@@ -20,8 +20,19 @@ describe("get all posts", () =>{
     test("username of first post should be username"), ()=>{ 
        expect(utilities.getAllPosts({})["1"].username).toBe("username")  
     }
-})
+}) 
 
+describe("get post by id", () =>{ 
+    const req = { 
+        params:{ 
+            id:"1" 
+        } 
+    } 
+    test("user 1 should be username", ()=>{ 
+        expect(utilities.getPostById(req).toBe("username"))
+    })
+
+})
 setUpData = () =>{ 
     testPostData = {} 
     testPost = {} 
@@ -35,4 +46,4 @@ setUpData = () =>{
     fs.writeFileSync(testDataFileForWrite, JSON.stringify(testPostData)) 
     utilities.loadData(testDataFileForWrite)
 
-}
+} 
