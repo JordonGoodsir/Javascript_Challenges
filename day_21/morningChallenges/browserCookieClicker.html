@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigfoot's Cookie Clicker</title>
+</head>
+<body>
+    <h1 id="countCookiesClicked">0</h1>
+    <button onclick="cookieClick()">Click me!</button>
+
+
+    <script>
+        var countElem = document.getElementById("countCookiesClicked");
+        var currentCount = readCountFromCookie();
+        countElem.innerHTML = currentCount;
+
+        function cookieClick(){
+            let currentCount = Number.parseInt(countElem.innerHTML);
+            currentCount++;
+            countElem.innerHTML = currentCount; 
+            console.log(document.cookie)
+            saveCountToCookie(); 
+            
+        }
+
+        function saveCountToCookie(){
+            // save currentCount to cookie  
+            document.cookie = `${document.getElementById("countCookiesClicked").innerHTML}`
+
+            
+        }
+
+        function readCountFromCookie(){
+            document.cookie ? currentValue = document.cookie : currentValue = 0
+
+            // get data from cookie
+
+            // assign value from cookie to currentValue
+
+            return currentValue;
+        }
+
+    </script>
+</body>
+</html>
