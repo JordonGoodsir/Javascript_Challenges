@@ -12,3 +12,4 @@ function sumIfPossible(arr) {
 
 sumIfPossible(["number", 234, 34, "string", -9])
 
+
