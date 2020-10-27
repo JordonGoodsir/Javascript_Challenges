@@ -1,7 +1,5 @@
-import react from "react" 
-
 const styles = { 
-    backgroundColor = "blue"
+    backgroundColor: "blue"
 }
 
 const Card = (props) =>{
@@ -10,4 +8,6 @@ return(
         {props.children}
     </div>
 ) 
-}
+} 
+
+export default Card
