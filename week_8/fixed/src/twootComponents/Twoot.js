@@ -20,7 +20,8 @@ const Twoot = (props) =>{
            <h3>{modified_date.toLocaleString()}</h3> 
            <p>{content}</p>    
            
-        {!id ? "" : <button onClick={homeRedirect}>Delete Twoot</button>}
+        {!id ? "" : <button onClick={homeRedirect}>Delete Twoot</button>} 
+        {!id ? "" : <Link to={`/edit/twoot/${twoot._id}`}>Edit Twoot</Link>}
         {id ? "" : <Link to={`/twoot/${twoot._id}`}>View Twoot</Link>}
 
         </div>
