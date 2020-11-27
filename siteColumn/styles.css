@@ -1,0 +1,30 @@
+/* .cane {   
+    background-image: url("./candyCane2.png");
+    background-repeat: repeat;
+    width: 10vw; 
+    height:100vh;  
+
+}  */  
+
+* { 
+    margin:0; 
+    padding: 0;
+}
+
+.cane {    
+    width:5%;
+    height:100vh;
+    background: repeating-linear-gradient(
+        -220deg,
+        white ,
+        white 1.3em,
+        #b60d0f 20px,
+        #b60d0f 3rem
+      );
+
+}  
+
+body { 
+    background-color: #b60d0f;
+}
+

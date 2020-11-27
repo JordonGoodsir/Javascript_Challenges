@@ -28,7 +28,7 @@ function diamond(n){
     return ansArr.join("")
   }  
 
-  diamond(9)    
+  diamond(5)    
 
 
 
