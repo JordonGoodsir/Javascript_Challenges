@@ -6,9 +6,10 @@ function LCS(x, y) {
         if (y.split("").includes(v)){ 
             common.push(v)
         }
-    }) 
-    console.log([...new Set(common)])
-    return [...new Set(common)]
+    })  
+    
+    console.log([...new Set(common)].join(""))
+    return [...new Set(common)].join("")
   } 
 
-  LCS("abcdef", "abc") 
+  LCS("a", "b") 
