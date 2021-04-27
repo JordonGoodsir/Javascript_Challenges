@@ -31,6 +31,8 @@ decodeMorse = function(morseCode){
     }  
 }
 
+ 
+  decodeMorse('.... . -.--   .--- ..- -.. .')  
 
-  decodeMorse('.... . -.--   .--- ..- -.. .') 
+
 
